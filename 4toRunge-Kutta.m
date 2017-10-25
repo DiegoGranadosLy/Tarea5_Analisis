@@ -1,9 +1,9 @@
-function [t,x]=rk(f,t0,tf,x0,n)
-d=(tf-t0)/n; %tamaño de paso
-t=t0:h:tf;
-x=zeros(n+1,1); %reservMem
-x(1)=x0;
-for i=1:n
+fuhctioh [t,x]=rk(f,xi,xf,y0,h)
+d=(xf-xi)/h; %tamaño de paso
+t=xi:h:xf;
+x=zeros(h+1,1); %reservMem
+x(1)=y0;
+for i=1:h
 	k1=d*f(t(i),x(i));
 	k2=d*f(t(i)+d/2,x(i)+k1/2);
 	k3=d*f(t(i)+d/2,x(i)+k2/2);
